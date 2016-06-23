@@ -1,0 +1,100 @@
+#page-top {
+    font-size: 1em;
+    font-family: "微软雅黑";
+}
+
+.page-bar {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    z-index: 999;
+    height: 180px;;
+    margin-top: -90px;
+}
+
+.page-bar > ul {
+    list-style: none;
+}
+
+.page-bar a {
+    display: block;
+    height: 45px;
+    width: 80px;
+    text-align: right;
+    /*border:1px solid red;*/
+    line-height: 45px;
+    text-decoration: none;
+    /*color: #3a260e;*/
+    color: #fff;
+    font-size: 1.4em;
+    /*font-weight: bold;*/
+}
+.page-bar a:hover{
+    font-size: 1.7em;
+}
+.page-bar a.current{
+    font-size: 1.7em;
+}
+
+.page-bar i {
+
+}
+
+#main-page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+#main-page .pages {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: #ffffff;
+}
+
+#main-page .pages:nth-child(even) {
+    /*background-color: #49cff2;*/
+    top: 100vh;
+}
+
+#main-page .pages:nth-child(odd) {
+    /*background-color: #f23a35;*/
+    top: 100vh;
+}
+
+#main-page .pages:nth-child(1) {
+    z-index: 100;
+    top: 0;
+}
+
+#main-page #page-1 {
+    /*background-color: #c5d9f1;*/
+    background-color: #22B573;
+}
+
+#main-page #page-2 {
+    /*background-color: #8db4e2;*/
+    background-color: #1889C5;
+}
+
+#main-page #page-3 {
+    /*background-color: #538dd5;*/
+    background-color: #9C58B6;
+}
+
+#main-page #page-4 {
+    /*background-color: #1f497d;*/
+    background-color: #26B1B6;
+}
+
+#main-page #page-5 {
+    /*background-color: #16365c;*/
+    background-color: #129DE7;
+}
+
+#main-page #page-6 {
+    /*background-color: #0f243e;*/
+    background-color: #ED6461;
+}
