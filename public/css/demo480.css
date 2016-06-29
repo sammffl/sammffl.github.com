@@ -1,0 +1,5 @@
+#device-width {
+    color: red;
+    content: attr(fontSize, text)
+
+}

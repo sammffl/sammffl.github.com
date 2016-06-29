@@ -9,6 +9,7 @@
     <title>沈余的简介</title>
     <link rel="shortcut icon" href="public/images/favicon.ico"/>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="public/css/index.css"/>
     <!--[if lt IE 9]>
     <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
@@ -31,22 +32,60 @@
 
 <div id="main-page" class="container-fluid">
     <section class="row pages current" id="page-1" data-role="1">
-        <div class="col-xs-12">content-1</div>
+        <div class="col-xs-12">
+            <!--<h1>沈余</h1>-->
+            <ul id="resume-icon">
+                <li><a href="https://github.com/sammffl" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li><!--
+             --><li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><!--
+             --><li><img src="public/images/sam.gif" alt=""></li><!--
+             --><li><a href="mailto:samfec@163.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li><!--
+             --><li><a href="https://www.zybuluo.com/sammffl/note/421313"><i class="fa fa-list" aria-hidden="true"></i></a></li>
+            </ul>
+            <article>
+                <ul>
+                    <li><i>姓名</i>沈余</li>
+                    <li><i>手机</i>13482437881</li>
+                    <li><i>qq</i>912963133</li>
+                    <li><i>邮箱</i>samfec@163.com</li>
+                    <li><i>所在地</i>上海 - 徐汇</li>
+                    <li><i>GitHub</i><a href="https://github.com/sammffl" target="_blank">https://github.com/sammffl</a> </li>
+                    <li><i>LinkedIn</i></li>
+                </ul>
+            </article>
+        </div>
     </section>
     <section class="row pages" id="page-2" data-role="2">
-        <div class="col-xs-12">content-2</div>
+        <div class="col-xs-12">
+            <h1>擅长技能</h1>
+
+
+            <div class="skills">
+                <div><span>nodejs</span><span class="content">熟悉</span></div>
+                <div class="skills-percent">
+                    <div class="percent" percent="45"></div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="row pages" id="page-3" data-role="3">
-        <div class="col-xs-12">content-3</div>
+        <div class="col-xs-12">
+            <h1>项目经验</h1>
+        </div>
     </section>
     <section class="row pages" id="page-4" data-role="4">
-        <div class="col-xs-12">content-4</div>
+        <div class="col-xs-12">
+            <h1>工作经历</h1>
+        </div>
     </section>
     <section class="row pages" id="page-5" data-role="5">
-        <div class="col-xs-12">content-5</div>
+        <div class="col-xs-12">
+            <h1>教育背景</h1>
+        </div>
     </section>
     <section class="row pages" id="page-6" data-role="6">
-        <div class="col-xs-12">content-6</div>
+        <div class="col-xs-12">
+            <h1>心仪工作</h1>
+        </div>
     </section>
 </div>
 <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -57,12 +96,16 @@
     (function ($) {
 
         $(function () {
-            mouseWheelHandle.init({
-                mainPage: "#main-page",
-                sideBar: ".page-bar",
-                pageAmount: 6,
-                animateTime: 800
-            });
+//            mouseWheelHandle.init({
+//                mainPage: "#main-page",
+//                sideBar: ".page-bar",
+//                pageAmount: 6,
+//                animateTime: 800
+//            });
+
+            var script = document.createElement("script");
+            script.src="public/js/index.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
         });
 
     })($);
