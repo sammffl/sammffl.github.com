@@ -1,3 +1,14 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul > li {
+    padding: 0;
+    margin: 0;
+}
+
 #page-top {
     font-size: 1em;
     font-family: "微软雅黑";
@@ -72,16 +83,13 @@
     top: 0;
 }
 
-#main-page .pages {
-    /*position: relative;*/
-}
-
 #main-page #page-1 {
     /*background-color: #c5d9f1;*/
     background-color: #22B573;
 }
 
 #main-page #page-1 h1 {
+    margin-top: 40px;
     text-shadow: 1px 2px #22B573, 2px 4px #77b598;
 }
 
@@ -96,15 +104,6 @@
     /*top: 20%;*/
 }
 
-/*#main-page #page-1 #resume-icon:after{*/
-/*content: '';*/
-/*display: block;*/
-/*width:0;*/
-/*font-size: 0;*/
-/*padding:0;*/
-/*line-height:0;*/
-/*clear: both;*/
-/*}*/
 #page-1 #resume-icon li {
     display: inline-table;
     /*float: left;*/
@@ -117,15 +116,16 @@
     transition: all 0.4s ease 0s;
 }
 
-
-#page-1 #resume-icon li:hover{
+#page-1 #resume-icon li:hover {
     transform: rotate(360deg);
 }
-#page-1 #resume-icon li:nth-child(3){
+
+#page-1 #resume-icon li:nth-child(3) {
     transition: none;
 }
-#page-1 #resume-icon li:nth-child(3):hover{
-    transform:none;
+
+#page-1 #resume-icon li:nth-child(3):hover {
+    transform: none;
 }
 
 #page-1 #resume-icon li:nth-child(3) {
@@ -140,7 +140,68 @@
     color: #ffffff;
 }
 
+#page-1 article {
+    width: 60%;
+    margin: 40px auto;
+    /*border:1px solid white;*/
+}
 
+#page-1 article:after {
+    content: "";
+    display: block;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+}
+
+#page-1 article ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    /*border:1px solid red;*/
+    float: left;
+}
+
+#page-1 article ul > li {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 1.6em;
+}
+
+#page-1 article i {
+    font-style: normal;
+    display: inline-block;
+    width: 30%;
+    height: 30px;;
+    line-height: 30px;
+    padding-right: 20px;
+    margin-right: 20px;;
+    text-align: right;
+    /*padding: 10px 20px;*/
+    background: linear-gradient(to bottom, #ffffff, #d3d3d3, #ffffff) no-repeat right center / 1px 15px;;
+}
+
+#page-1 article .introduce {
+    float: left;
+    /*padding: 20px;*/
+    width: 50%;
+    font-size: 1.6em;
+    text-indent: 2em;
+    line-height: 1.5;
+
+}
+
+#page-1 article a {
+    color: #ffffff;
+}
+
+#page-1 article a:hover {
+    /*text-decoration: none;*/
+    color: #ffffff;;
+}
 
 #page-1 #resume-icon li a:hover {
     text-decoration: none;
@@ -158,6 +219,10 @@
     #page-1 #resume-icon li {
         font-size: 6em;
     }
+
+    #page-1 #resume-icon {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -172,6 +237,7 @@
 }
 
 #main-page #page-2 h1 {
+    margin-top: 100px;
     text-shadow: 1px 2px #1889C5, 2px 4px #89aac5;
 }
 
@@ -181,7 +247,52 @@
 }
 
 #main-page #page-3 h1 {
+    margin-top: 100px;
     text-shadow: 1px 2px #9C58B6, 2px 4px #ae9fb6;
+}
+
+#page-3 .experience {
+    width: 680px;
+    height: 400px;
+    margin: 80px auto;
+    /*border: 1px solid gray;*/
+}
+
+#page-3 .experience:after {
+    content: '';
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+    display: block;
+}
+
+#page-3 .experience .project {
+    /*border:1px solid gray;*/
+    /*background-color: rosybrown;*/
+    width: 280px;
+    height: 400px;
+    float: left;
+}
+
+#page-3 .experience .project > img {
+    width: 180px;
+    margin: 0 0 30px 50px;
+}
+
+#page-3 .experience .project > h3 {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+#page-3 .experience .project > p {
+    text-indent: 2em;
+    font-size: 1.6em;
+    line-height: 1.5;
+}
+
+#page-3 .experience .project:nth-child(2) {
+    float: right;
 }
 
 #main-page #page-4 {
@@ -190,16 +301,83 @@
 }
 
 #main-page #page-4 h1 {
+    margin-top: 100px;
     text-shadow: 1px 2px #26B1B6, 2px 4px #76b5b6;
+}
+
+#page-4 .time-line {
+    position: relative;
+    width: 60%;
+    height: 400px;;
+    margin: 40px auto;;
+    /*border: 1px solid gray;*/
+
+}
+
+#page-4 .time-line .dash-line {
+    width: 100%;
+    height: 0;
+    border: 2px dashed white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+}
+
+#page-4 .time-line .time-box {
+    position: relative;
+    /*left: 10%;*/
+    margin-left: 8%;
+    top: 147px;;
+    height: 200px;
+    width: 40%;
+    /*border: 1px solid red;;*/
+    float: left;
+}
+
+.time-line .time-box .time {
+    font-size: 2em;
+    text-indent: 20px;
+    margin-bottom: 18px;
+}
+
+.time-line .time-box .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 0 2px white;;
+}
+
+.time-line .time-box h5,
+.time-line .time-box h4 {
+    padding-left: 20px;
+    line-height: 1.5;
 }
 
 #main-page #page-5 {
     /*background-color: #16365c;*/
+
     background-color: #129DE7;
 }
 
 #main-page #page-5 h1 {
+    margin-top: 100px;
     text-shadow: 1px 2px #129DE7, 2px 4px #97bce7;
+}
+
+#main-page #page-5 .college {
+    margin: 260px 0 0 0;;
+    text-align: center;
+    color: #ffffff;
+    transition: all 1.5s ease-in 0.18s;
+    transform: rotate(-180deg) scale(0.001, 0.001);
+    font-size: 5em;
+}
+
+#main-page #page-5 h2 {
+   font-size:  0.5em
+
 }
 
 #main-page #page-6 {
@@ -208,22 +386,37 @@
 }
 
 #main-page #page-6 h1 {
+    margin-top: 100px;
     text-shadow: 1px 2px #ED6461, 2px 4px #edbbb3;
 }
 
+#page-6 .resume{
+    text-align: center;
+    margin: 260px auto;;
+    font-size: 3.2em;
+}
+
+#page-6 .resume >span{
+    padding: 10px;
+    background:linear-gradient(to bottom ,#ffffff,#ffffff,#ffffff) no-repeat right center / 1px 15px;
+}
+#page-6 .resume >span:last-child{
+    background: none;
+}
 #main-page h1 {
     text-align: center;
+    margin-top: 100px;
     /*text-shadow: 1px 2px #22B573, 2px 4px #77b598;*/
     font-size: 5.5em;
 }
 
 .skills {
     position: relative;
-    width: 38%;
+    width: 36%;
     height: 65px;;
     /*border: 1px solid gray;*/
     float: left;
-    margin: 20px 6%;;
+    margin: 20px 5.5%;;
 }
 
 .skills > div:first-child {
@@ -262,7 +455,60 @@
 
 .skills > .skills-percent > .percent {
     background-color: #5cb85c;
-    width: 45%;
+    width: 0%;
     height: 100%;
     /*border-radius: 4px;*/
+    transition: width 3s ease 0s;
+}
+
+#progress {
+    position: absolute;
+    /*top: 0;*/
+    /*left: 0;*/
+    z-index: 999;
+    height: 2px;
+    background: #1889C5;
+    -webkit-animation: pulse 1.5s ease-out;
+    -o-animation: pulse 1.5s ease-out;
+    animation: pulse 1.5s ease-out;
+    transition: opacity 500ms linear;
+}
+
+#progress span {
+    position: absolute;
+    height: 2px;
+    -webkit-box-shadow: #1889C5 1px 0 2px 1px;
+    -moz-box-shadow: #1889C5 1px 0 2px 1px;
+    box-shadow: #1889C5 1px 0 2px 1px;
+    opacity: 1;
+    width: 100px;
+    right: 3px;
+    -webkit-animation: pulse-span 2s ease-out 0s infinite;
+    -o-animation: pulse-span 2s ease-out 0s infinite;
+    animation: pulse-span 2s ease-out 0s infinite;
+}
+
+#progress.done {
+    opacity: 0;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes pulse-span {
+    30% {
+        opacity: .6;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .6;
+    }
 }

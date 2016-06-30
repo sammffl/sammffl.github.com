@@ -213,6 +213,23 @@
             $('.page-bar a').removeClass("current");
             $('.page-bar a[data-role="' + target + '"]').addClass("current");
             //}, 1000)
+            if (target == 2) {
+                //alert(1)
+                mouseWheelHandle.fillPercent();
+            } else {
+                mouseWheelHandle.fillPercent(true);
+            }
+
+
+            if (target == 5) {
+                $('#main-page #page-5 .college').css({
+                    'transform':' rotate(0deg) scale(1,1)'
+                })
+            }else{
+                $('#main-page #page-5 .college').css({
+                    'transform':' rotate(-180deg) scale(0.001, 0.001)'
+                })
+            }
         },
         /**
          * 不相邻两页也做相邻两页翻页处理
@@ -231,6 +248,20 @@
 
                 mouseWheelHandle.animateAction(direction, targetN);
             });
+        },
+        fillPercent: function (flag) {
+
+            var $percents = $(".skills-percent >.percent");
+            for (var i = 0, max = $percents.length; i < max; i++) {
+                var $percent = $($percents[i]);
+                if (!flag) {
+                    $percent.css({'width': $percent.attr('percent') + '%'})
+                } else {
+                    $percent.css({'width': '0%'})
+                }
+
+            }
+
         },
         resize: function () {
             $(window).resize(function () {

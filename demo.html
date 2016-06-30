@@ -74,17 +74,24 @@
     <link rel="stylesheet" href="public/css/demo480.css"  media="screen and (max-device-width:2000px) and (min-device-width:340px)">
     <link rel="stylesheet" href="public/css/demo320.css" media="screen and (max-device-width:320px)">
 
+
+    <!--<link rel="stylesheet" href="public/libs/jquery-timelinr/css/style.css" media="screen" />-->
+
+    <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+    <!--<script src="public/libs/jquery-timelinr/js/jquery.timelinr-0.9.6.js"></script>-->
 </head>
 <body>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+<!--<br><br><br><br><br><br><br><br><br><br><br><br>-->
+<!--<br><br><br><br><br><br><br><br><br><br><br><br>-->
+<!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+<!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
 <div class="parent">
     <div id="div1" title="acsscc">s</div>
 </div>
+
+<div style="height: 0px; width: 30%;border:1px dashed red"></div>
 <!--<div class="progress">-->
     <!--<div><span>nodejs</span><span class="content">熟悉</span></div>-->
     <!--<div class="progress-bar">-->
@@ -98,5 +105,23 @@
     <!--var objProgress = document.getElementsByClassName("progress")-->
     <!--alert(getComputedStyle(objProgress[0],null).width);-->
 <!--</script>-->
+
+<script src="public/libs/d3/d3.min.js"></script>
+<script>
+
+    d3.select("body").append("h1")
+            .text("Hello, world!")
+            .style("text-align", "center")
+            .style("line-height", "320px")
+            .style("font-size", "100px")
+            .style("transform", "rotate(-180deg) scale(0.001, 0.001)")
+            .transition()
+            .duration(1500)
+            .style("transform", null);
+
+</script>
+
+</div>
+
 </body>
 </html>

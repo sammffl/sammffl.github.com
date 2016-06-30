@@ -9,3 +9,15 @@ mouseWheelHandle.init({
     pageAmount: 6,
     animateTime: 800
 });
+//fillPercent()
+function fillPercent() {
+    var $percents = $(".skills-percent >.percent");
+    for (var i= 0,max = $percents.length;i<max;i++){
+        var $percent = $($percents[i]);
+        $percent.css({'width':'0%'})
+    }
+    for (var i= 0,max = $percents.length;i<max;i++){
+        var $percent = $($percents[i]);
+        $percent.css({'width':$percent.attr('percent')+'%'})
+    }
+}
