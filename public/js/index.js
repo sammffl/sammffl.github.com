@@ -35,14 +35,15 @@ $(function () {
         }
         mouseWheelHandle.animateAction('up');
         targetFunc(mouseWheelHandle.nextNumber)
+        changeCurrent(mouseWheelHandle.nextNumber);
     });
 
     $("body").bind('swipeUp', function () {
         var currentNumber = mouseWheelHandle.currentNumber;
         mouseWheelHandle.animateAction('down');
         console.log('nextNumber', mouseWheelHandle.nextNumber);
-        targetFunc(mouseWheelHandle.nextNumber)
-
+        targetFunc(mouseWheelHandle.nextNumber);
+        changeCurrent(mouseWheelHandle.nextNumber);
     });
 
 
@@ -64,6 +65,12 @@ $(function () {
         }
     }
 
+    function changeCurrent(target) {
+        $('#main-page > section').removeClass('current');
+        $('#main-page > section[data-role="' + target + '"]').addClass('current');
+        $('.page-bar .page-scroll').removeClass('current');
+        $('.page-bar .page-scroll[data-role="' + target + '"]').addClass('current');
+    }
 });
 
 
