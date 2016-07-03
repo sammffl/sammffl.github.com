@@ -2,6 +2,10 @@
  * Created by SamMFFL on 2016/6/28.
  */
 
+document.addEventListener('touchmove', function (event) {
+    event.preventDefault();
+}, false);
+
 
 $({property: 0}).animate({property: 100}, {
     duration: 1500,
