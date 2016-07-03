@@ -231,6 +231,11 @@ ul > li {
     }
 }
 
+#page-1 #more-info{
+
+    display: none;
+}
+
 #main-page #page-2 {
     /*background-color: #8db4e2;*/
     background-color: #1889C5;
@@ -275,17 +280,17 @@ ul > li {
     float: left;
 }
 
-#page-3 .experience .project > img {
+#page-3 .experience .project   img {
     width: 180px;
     margin: 0 0 30px 50px;
 }
 
-#page-3 .experience .project > h3 {
+#page-3 .experience .project   h3 {
     text-align: center;
     margin: 0 0 20px 0;
 }
 
-#page-3 .experience .project > p {
+#page-3 .experience .project   p {
     text-indent: 2em;
     font-size: 1.6em;
     line-height: 1.5;

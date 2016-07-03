@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="description" content="个人简历">
     <meta name="author" content="Sam.Shen">
     <title>沈余的简介</title>
     <link rel="shortcut icon" href="public/images/favicon.ico"/>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="bower_components/notie/dist/notie.css"/>
+
     <link rel="stylesheet" href="public/css/index.css" media="screen and (min-width:1000px)"/>
+    <link rel="stylesheet" href="public/css/index440.css" media="screen and (max-width:440px)"/>
     <!--[if lt IE 9]>
     <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
     <script src="bower_components/respond/src/respond.js"></script>
@@ -19,9 +22,10 @@
 </head>
 <body id="page-top">
 
-    <div id="progress">
-        <span></span>
-    </div>
+<div id="progress">
+    <span></span>
+</div>
+<div class="menu-bg"></div>
 <nav class="page-bar">
     <ul>
         <li><i></i><a href="javascript:void(0);" class="page-scroll current" data-role="1">个人简历</a></li>
@@ -43,18 +47,22 @@
                         <i class="fa fa-github" aria-hidden="true"></i>
                     </a>
                 </li><!--
-             --><li>
+             -->
+                <li>
                     <a href="https://cn.linkedin.com/in/余-沈-539a92121" target="_blank">
                         <i class="fa fa-linkedin" aria-hidden="true"></i>
                     </a>
                 </li><!--
-             --><li><img src="public/images/sam.gif" alt=""></li><!--
-             --><li>
+             -->
+                <li><img src="public/images/sam.gif" alt=""></li><!--
+             -->
+                <li>
                     <a href="mailto:samfec@163.com">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
                     </a>
                 </li><!--
-             --><li>
+             -->
+                <li>
                     <a href="https://www.zybuluo.com/sammffl/note/421313" target="_blank">
                         <i class="fa fa-list" aria-hidden="true"></i>
                     </a>
@@ -68,8 +76,12 @@
                     <li><i>邮箱</i><a href="mailto:samfec@163.com">samfec@163.com</a></li>
                     <li><i>所在地</i>上海 - 徐汇</li>
                     <li><i>GitHub</i><a href="https://github.com/sammffl" target="_blank">联系我</a></li>
-                    <li><i>LinkedIn</i><a href="https://cn.linkedin.com/in/余-沈-539a92121" target="_blank">联系我</a></li>
+                    <li><i>领英</i><a href="https://cn.linkedin.com/in/余-沈-539a92121" target="_blank">联系我</a></li>
                 </ul>
+
+                <i id="more-info" class="fa fa-user-plus" aria-hidden="true"></i>
+
+
                 <div class="introduce">
                     <p>
                         喜欢接触新鲜事物，对新技术抱有开放的心态。
@@ -120,7 +132,7 @@
                 </div>
             </div>
             <div class="skills">
-                <div><span>PhotoShop</span><span class="content">掌握</span></div>
+                <div><span>PS</span><span class="content">掌握</span></div>
                 <div class="skills-percent">
                     <div class="percent" percent="40"></div>
                 </div>
@@ -159,19 +171,23 @@
             <div class="experience">
                 <div class="project">
                     <img src="public/images/trust.png" alt="">
-                    <h3>信用芯片</h3>
-                    <p>
-                        信用芯片是一款个人互联网征信的软件，通过查询用户个人信息、购物记录和出行信息，
-                        依据大数据给用户打出个人征信分，项目中主要负责用户信息收集（nodejs），以及官网前端画面以及手机h5页面
-                    </p>
+                    <div>
+                        <h3>信用芯片</h3>
+                        <p>
+                            信用芯片是一款个人互联网征信的软件，通过查询用户个人信息、购物记录和出行信息，
+                            依据大数据给用户打出个人征信分，项目中主要负责用户信息收集（nodejs），以及官网前端画面以及手机h5页面
+                        </p>
+                    </div>
                 </div>
                 <div class="project">
                     <img src="public/images/ez-loan.png" alt="">
-                    <h3>贷款王（原随心贷）</h3>
-                    <p>
-                        软件属于互联网小额贷款工具
-                        在项目中负责 官网首页前端画面，和 后台审核系统 部分页面以及 报表系统 部分功能（python）
-                    </p>
+                    <div>
+                        <h3>贷款王（原随心贷）</h3>
+                        <p>
+                            软件属于互联网小额贷款工具
+                            在项目中负责 官网首页前端画面，和 后台审核系统 部分页面以及 报表系统 部分功能（python）
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -227,37 +243,13 @@
     </section>
 </div>
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="public/libs/zepto/zepto.min.js"></script>
+<script src="public/libs/zepto/touch.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/notie/dist/notie.min.js"></script>
 <script src="bower_components/jquery-mousewheel/jquery.mousewheel.min.js"></script>
 <script src="public/js/mouseWheelHandle.js"></script>
-<script>
-    (function ($) {
-        $({property: 0}).animate({property: 100}, {
-            duration: 1500,
-            step: function () {
-                var percentage = Math.round(this.property);
-                $("#progress").css('width', percentage + "%");
-                if (percentage == 100) {
-                    $("#progress").addClass("done");
-                }
-            }
-        })
-        $(function () {
-
-
-//            mouseWheelHandle.init({
-//                mainPage: "#main-page",
-//                sideBar: ".page-bar",
-//                pageAmount: 6,
-//                animateTime: 800
-//            });
-
-            var script = document.createElement("script");
-            script.src = "public/js/index.js";
-            document.getElementsByTagName("head")[0].appendChild(script);
-        });
-
-    })($);
-</script>
+<script src="public/js/index.js"></script>
+<!--<script src="public/js/indexMobile.js" media="screen and (max-width:440px)"></script>-->
 </body>
 </html>
