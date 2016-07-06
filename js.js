@@ -95,7 +95,6 @@ function loadScript(url, callback) {
 }
 
 
-
 var url = '/data.php';
 var params = [
     'id=454',
@@ -104,14 +103,45 @@ var params = [
 
 var req = new XMLHttpRequest();
 req.onreadystatechange = function () {
-    if(req.readyState ===4){
+    if (req.readyState === 4) {
         var responseHeaders = req.getAllResponseHeaders();//获取响应头信息
         var data = req.responseText;//获取数据
     }
 }
 
-req.open('GET',url+'?'+params.join("&"),true);
-req.setRequestHeader('X-Requested-Width','XMLHttpRequest');//设置请求头信息
+req.open('GET', url + '?' + params.join("&"), true);
+req.setRequestHeader('X-Requested-Width', 'XMLHttpRequest');//设置请求头信息
 req.send(null);
+
+
+function set(key) {
+    var img = document.createElement('img');
+    img.addEventListener('load', function () {
+        var imgCanvas = document.createElement("canvas"),
+            imgContext = imgCanvas.getContext('2d');
+        imgCanvas.width = this.width;
+        imgCanvas.height = this.height;
+
+        imgContext.drawImage(this, 0, 0, this.width, this.height);
+        var imgAsDataURL = imgCanvas.toDataURL("image/png");
+        try {
+            localStorage.setItem(key, imgAsDataURL);
+        } catch (e) {
+            console.log("storage failed: " + e);
+        }
+    }, false);
+    img.src = src;
+}
+
+function get(key) {
+    var srcStr = localStorage.getItem(key);
+    var imgObj = document.createElement('img');
+    imgObj.src = srcStr;
+    document.body.appendChild(imgObj)
+}
+
+
+
+
 
 
